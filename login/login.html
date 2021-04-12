@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <header>
+            <div class="header">
+                <div class="inner-header">
+                    <div class= "header-text">
+                        <h1>RootzControl</h1>
+                    </div>
+                </div>  
+            </div>
+        </header>
+    
+        <div id= "mainLogin">
+            <div class="new-input-fields">
+                <input type="password" readonly class="fieldOne" maxlength=1 />
+                <input type="password" readonly class="fieldTwo" maxlength=1 />
+                <input type="password" readonly class="fieldThree" maxlength=1/>
+                <input type="password" readonly class="fieldFour" maxlength=1/>
+                <i class="far fa-eye"  id="togglePassword"></i>
+            </div>
+            <div class="pin-login" >
+                <div class="pin-login__numpad">
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="../pincode.js"></script>
+    <script>
+            new PinLogin({
+                el: document.getElementById ("mainLogin"),
+                maxNumbers: 4
+            });
+    </script>
+</html>

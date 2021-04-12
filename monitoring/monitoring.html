@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="transition-animation">
+        <div class="button-top-layer"></div>
+        <div class="button-top-layer top-layer--2"></div>
+        <div class="button-top-layer top-layer--3"></div>
+        <div class="button-top-layer top-layer--4"></div>
+        <div class="-layer top-layer--5"></div>
+    </div>    
+    <main class="main-tags" id="main-tags-toggle">
+        <div class="header">
+            <div class= "inner-header">
+                <div class= leftBotton>
+                    <img class= "arrowPix" src= "../back-icon.png" alt= "Back to room icon" onclick="goBack()" />
+                </div>
+                <div class= "header-text">
+                    <h1>Back to room</h1> 
+                </div>
+            </div>
+        </div>
+        <div class= "parent">
+            <div class= "child child1">
+                <span class="dot1">
+                    <i class="fas fa-cog"></i>
+                </span>
+                <span class="dot2">
+                    <i class="fas fa-fingerprint"></i>
+                </span>
+            </div>
+            <div class= "child child2">
+                <div class= "container">
+                    <ul> 
+                        <li>  
+                            <div class="mytitle">
+                                <p class="title-number" >1</p>
+                            </div>
+                            <div class= on-off>ON</div>
+                        </li>
+                        <li>  
+                            <div class="title">
+                                <p class="title-number" >2</p>
+                            </div>
+                            <div class= on-off>Off</div>
+                        </li>
+                        <li>  <div class="title">
+                            <p class="title-number" >3</p>
+                        </div>
+                            <div class= on-off>Off</div>
+                        </li>
+                        <li>  <div class="title">
+                            <p class="title-number" >4</p>
+                        </div>
+                            <div class= on-off>Off</div>
+                        </li>
+                        <li>  <div class="title">
+                            <p class="title-number" >5</p>
+                        </div>
+                            <div class= on-off>Off</div>
+                        </li>
+                        <li>  <div class="title">
+                            <p class="title-number" >6</p>
+                        </div>
+                            <div class= on-off>Off</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>   
+</body>
+
+<script>
+    function goBack() {
+        var layers = document.querySelectorAll(".button-top-layer");
+        var main = document.getElementById("main-tags-toggle");
+        for (const layer of layers) {
+            layer.classList.toggle("active");
+            main.classList.add('main-tags-delete');
+        }
+        window.setTimeout(function(){
+            window.location.href = '../login/login.html';
+        }, 1250);
+    };
+</script>
+
+</html>
